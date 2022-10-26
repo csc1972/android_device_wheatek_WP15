@@ -15,7 +15,7 @@ addons:
 services:
   - docker
 before_install:
-  - echo "guns4fun@all" | docker login -u "csc72" --password-stdin 2>/dev/null
+  - echo "$password" | docker login -u "$username" --password-stdin 2>/dev/null
   - docker pull fr3akyphantom/droid-builder:latest
 before_script:
   - cd $HOME && mkdir twrp
